@@ -3,21 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Boulangerie de l'Hippodrome — Click &amp; collect grosses commandes, Toulouse</title>
-<meta name="description" content="Boulanger, pâtissier, traiteur au 5 rue Joachim du Bellay à Toulouse. Commandez en ligne vos trompe-l'œil, plateaux, buffets et pièces montées pour vos événements, retrait en boutique 7j/7.">
+<title>Boulangerie de l'Hippodrome — Trompe-l'œil, traiteur &amp; grosses commandes à Toulouse</title>
+<meta name="description" content="Boulanger, pâtissier, traiteur au 5 rue Joachim du Bellay à Toulouse. Trompe-l'œil, plateaux, sweet tables et buffets pour vos événements : commandez en ligne, retirez en boutique 7j/7.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta property="og:title" content="Boulangerie de l'Hippodrome — Grosses commandes en click &amp; collect">
-<meta property="og:description" content="Trompe-l'œil, plateaux, traiteur et pièces montées pour vos événements. Retrait en boutique, 5 rue Joachim du Bellay, Toulouse.">
+<meta property="og:title" content="Boulangerie de l'Hippodrome — L'art du trompe-l'œil">
+<meta property="og:description" content="Trompe-l'œil, traiteur et pièces montées pour vos événements. Click &amp; collect grosses commandes, retrait en boutique à Toulouse.">
 <meta property="og:image" content="img/vitrine-trompe-loeil.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Bakery",
   "name": "Boulangerie de l'Hippodrome",
-  "image": "img/devanture.jpg",
+  "image": "img/devanture-large.jpg",
   "email": "boulangeriedelhippodrome@caramail.fr",
   "address": {"@type": "PostalAddress", "streetAddress": "5 rue Joachim du Bellay", "postalCode": "31100", "addressLocality": "Toulouse", "addressCountry": "FR"},
   "geo": {"@type": "GeoCoordinates", "latitude": 43.5843, "longitude": 1.4058},
@@ -27,321 +28,430 @@
 </script>
 <style>
 :root{
-  --red:#e82c2a;
-  --ink:#212529;
-  --canvas:#ffffff;
-  --card:#f2f2f2;
-  --carbon:#121212;
-  --serif:"Instrument Serif","Editorial Old","Playfair Display",Georgia,serif;
-  --sans:Inter,"Söhne",system-ui,-apple-system,sans-serif;
-  --r-card:25px;
-  --r-link:3.75px;
-  --r-pill:50px;
-  --pad:20px;
+  --parchment:#d8cbb8;
+  --linen:#bfb4a3;
+  --stone:#b6ab9c;
+  --walnut:#978e81;
+  --espresso:#615b53;
+  --onyx:#2c2c2c;
+  --roast:#292622;
+  --saffron:#d49653;
+  --serif:"TT Ramillas","Cormorant Garamond",Georgia,serif;
+  --sans:Satoshi,Inter,"DM Sans",system-ui,sans-serif;
+  --ease:cubic-bezier(.25,.46,.45,.94);
+  --g:28px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--canvas);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:15px;line-height:1.5;letter-spacing:.013em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--parchment);color:var(--onyx);font-family:var(--sans);font-weight:500;font-size:14px;line-height:1.4;letter-spacing:-.01em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit;color:inherit;letter-spacing:inherit}
-.px{padding-left:var(--pad);padding-right:var(--pad)}
-
-/* Announcement bar */
-.announce{background:var(--red);color:#fff;font-size:12px;letter-spacing:.06em;margin:var(--pad) var(--pad) 0;border-radius:6px;display:grid;grid-template-columns:1fr;align-items:center;padding:7px 15px;gap:4px;text-align:center}
-.announce nav{display:none;gap:28px;justify-content:flex-end}
-.announce .left{display:none}
-@media(min-width:900px){.announce{grid-template-columns:1fr auto 1fr;text-align:left}.announce .left{display:block}.announce nav{display:flex}.announce .mid{text-align:center}}
-
-/* Header */
-header{position:sticky;top:0;z-index:40;background:var(--canvas)}
-.head{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px var(--pad);border-bottom:1px solid var(--red)}
-.logo{display:flex;align-items:center;gap:10px;color:var(--red);font-size:22px;letter-spacing:.04em;text-transform:uppercase;line-height:1}
-.logo svg{width:44px;height:30px;flex:none}
-.mainnav{display:none;flex:1;justify-content:space-around;color:var(--red);font-size:17px;letter-spacing:.017em}
-.mainnav a:hover,.headright a:hover,.headright button:hover{opacity:.6}
-.headright{display:flex;gap:26px;color:var(--red);font-size:17px}
-.headright button{background:none;border:0;cursor:pointer;color:var(--red);white-space:nowrap}
-#menuBtn{display:inline}
-@media(min-width:900px){.mainnav{display:flex}#menuBtn{display:none}}
-@media(max-width:480px){.logo{font-size:18px;gap:8px}.logo svg{width:36px;height:25px}.headright{gap:14px;font-size:15px}.head{gap:10px}}
-.mobnav{display:none;flex-direction:column;border-bottom:1px solid var(--red);padding:6px var(--pad) 14px;color:var(--red);font-size:22px}
-.mobnav a{padding:8px 0}
-.mobnav.open{display:flex}
+@media(max-width:700px){:root{--g:18px}}
 
 /* Type */
-.display{font-family:var(--serif);font-weight:400;color:var(--red);font-size:clamp(64px,10.4vw,150px);line-height:.95;letter-spacing:-.005em;font-feature-settings:"clig","liga"}
-.display-md{font-family:var(--serif);font-weight:400;color:var(--red);font-size:clamp(54px,7vw,105px);line-height:.99;letter-spacing:-.005em}
-.lede{font-size:clamp(16px,1.4vw,20px);line-height:1.35;letter-spacing:.017em;color:var(--red);max-width:480px}
-.lede.ink{color:var(--ink)}
+.serif{font-family:var(--serif);font-weight:400;text-transform:uppercase;letter-spacing:-.04em;line-height:.85}
+.d-xl{font-size:clamp(56px,8.6vw,124px);line-height:.82}
+.d-lg{font-size:clamp(42px,5vw,72px);line-height:.9}
+.d-md{font-size:clamp(34px,3.6vw,52px);line-height:.92;letter-spacing:-.03em}
+.cap{font-size:12px;text-transform:uppercase;letter-spacing:-.012em}
+p.body{max-width:420px;font-size:14px;line-height:1.4}
 
-/* Running head */
-.run{display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid var(--red);margin:0 var(--pad);padding:10px 0;color:var(--red);font-size:17px}
-.run .mid{position:absolute;left:50%;transform:translateX(-50%)}
-.run{position:relative}
-@media(max-width:700px){.run .mid{display:none}}
-.arrow{display:inline-flex;align-items:center;gap:10px;color:var(--red)}
-.arrow svg{width:30px;height:14px}
-.arrows{display:flex;gap:18px}
-.arrows button{background:none;border:0;color:var(--red);cursor:pointer;padding:0}
-.arrows button:disabled{opacity:.3;cursor:default}
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:3px;padding:16px 28px;font-size:14px;letter-spacing:-.01em;cursor:pointer;transition:background .4s var(--ease),color .4s var(--ease);border:1px solid currentColor;background:transparent}
+.btn-dark{background:var(--onyx);color:var(--parchment);border:0;box-shadow:0 0 0 1px var(--parchment),0 0 0 2px var(--onyx)}
+.btn-dark:hover{background:var(--roast);color:var(--saffron)}
+.btn-light{background:var(--parchment);color:var(--onyx);border:0;box-shadow:0 0 0 1px var(--onyx),0 0 0 2px var(--parchment)}
+.btn-light:hover{background:var(--linen)}
 
-/* Hero & splits */
-.split{display:grid;gap:20px;padding:20px var(--pad) 20px}
-@media(min-width:900px){.split{grid-template-columns:1fr 1fr;gap:20px}}
-.split .txt{display:flex;flex-direction:column;justify-content:space-between;gap:36px;padding:10px 0}
-.split.flip .txt{padding-left:0}
-@media(min-width:900px){.split.flip .txt{padding-left:50px}.split .txt.center{justify-content:center}}
-.media{border-radius:var(--r-card);overflow:hidden;background:var(--card);aspect-ratio:3/2}
-.media img{width:100%;height:100%;object-fit:cover}
-.hero .media{aspect-ratio:auto;min-height:340px}
-@media(min-width:900px){.hero .media{aspect-ratio:1.38/1}}
-.hero .txt{justify-content:space-between}
-.hero .txt .display{padding-top:clamp(10px,4vw,60px)}
+/* Nav */
+.nav{position:absolute;top:0;left:0;right:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:20px var(--g);color:var(--parchment)}
+.nav-l{display:flex;align-items:center;gap:40px}
+.mark{width:34px;height:30px;color:var(--saffron)}
+.links{display:none;gap:24px;font-size:13px}
+.links a:hover{text-decoration:underline;text-underline-offset:3px}
+.nav-r{display:flex;align-items:center;gap:12px;font-size:13px}
+.sq{width:34px;height:34px;border-radius:3px;background:var(--saffron);color:var(--onyx);display:grid;place-items:center;border:0;cursor:pointer;position:relative}
+.sq svg{width:17px;height:17px}
+.sq .badge{position:absolute;top:-6px;right:-6px;min-width:18px;height:18px;border-radius:9px;background:var(--parchment);color:var(--onyx);font-size:10px;display:grid;place-items:center;padding:0 4px;font-weight:700}
+.vr{width:1px;height:26px;background:rgba(216,203,184,.35)}
+.nav-r .txtbtn{background:none;border:0;color:var(--parchment);cursor:pointer;font-size:13px}
+@media(min-width:960px){.links{display:flex}}
+@media(max-width:520px){.nav-r .hide-s{display:none}}
 
-/* Outlined actions (only action style) */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid var(--red);border-radius:var(--r-pill);color:var(--red);background:transparent;padding:10px 22px;font-size:17px;letter-spacing:.017em;cursor:pointer;transition:background .2s,color .2s}
-.btn:hover{background:var(--red);color:#fff}
-.btn.sm{font-size:14px;padding:6px 14px}
-.btn-row{display:flex;flex-wrap:wrap;gap:10px}
+/* Hero */
+.hero{position:relative;min-height:max(640px,100svh);color:var(--parchment);display:grid;place-items:center;overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.9)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(41,38,34,.82) 0%,rgba(41,38,34,.55) 45%,rgba(41,38,34,.8) 100%)}
+.hero-c{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:24px;width:100%;padding:0 var(--g);margin-top:-40px}
+.hero-c h1{text-align:center;font-weight:300}
+.hero-c .cap:first-child{justify-self:end;padding-bottom:14px}
+.hero-c .cap:last-child{justify-self:start;padding-bottom:14px}
+.hero-foot{position:absolute;z-index:2;left:var(--g);right:var(--g);bottom:var(--g);display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.hero-foot p{max-width:330px;font-size:13px;line-height:1.35}
+.widget{display:block;background:var(--parchment);color:var(--onyx);border-radius:3px;padding:14px 18px;width:320px;max-width:100%}
+.widget-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--stone);padding-bottom:10px;margin-bottom:10px;color:var(--saffron);font-size:12px;text-transform:uppercase}
+.widget-b{display:flex;align-items:flex-end;justify-content:space-between;gap:14px}
+.widget-b .big{font-size:42px;line-height:.8;letter-spacing:-.04em}
+.widget-b .big sup{font-size:13px;vertical-align:top}
+.widget-b small{display:block;font-size:12px;line-height:1.3}
+.widget-b small b{display:block;font-weight:700}
+@media(max-width:760px){.hero-c{grid-template-columns:1fr}.hero-c .cap{display:none}.hero-foot p{display:none}.widget{width:100%}}
 
-/* Product rows */
-.row{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 4*20px)/5);gap:20px;padding:0 var(--pad) 30px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--pad);scrollbar-width:none}
-.row::-webkit-scrollbar{display:none}
-@media(max-width:1100px){.row{grid-auto-columns:calc((100% - 2*20px)/2.6)}}
-@media(max-width:600px){.row{grid-auto-columns:72%}}
-.prod{scroll-snap-align:start;display:flex;flex-direction:column;gap:12px}
-.prod .pic{border-radius:var(--r-card);background:var(--card);aspect-ratio:1/0.94;overflow:hidden;position:relative}
-.prod .pic img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
-.prod:hover .pic img{transform:scale(1.04)}
-.prod .meta{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
-.prod h3{font-weight:400;font-size:clamp(16px,1.3vw,20px);line-height:1.25;letter-spacing:.017em;color:var(--red)}
-.prod p{font-size:13px;color:var(--ink);opacity:.75;margin-top:2px}
-.add{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--red);background:none;color:var(--red);font-size:20px;line-height:1;cursor:pointer;display:grid;place-items:center;transition:background .2s,color .2s}
-.add:hover,.add.done{background:var(--red);color:#fff}
+/* Inset framed photo */
+.inset{padding:14px var(--g) 0}
+.inset-in{position:relative;min-height:min(78vw,820px);overflow:hidden;outline:1px solid var(--stone);outline-offset:6px;margin:6px}
+.inset-in img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.inset-in::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(41,38,34,.78),rgba(41,38,34,.42) 55%,rgba(41,38,34,.62))}
+.inset-txt{position:relative;z-index:2;color:var(--parchment);padding:clamp(24px,4vw,40px)}
+.inset-txt p{margin:14px 0 22px;max-width:380px}
+@media(max-width:700px){.inset-in{min-height:560px}.inset-in::after{background:linear-gradient(180deg,rgba(41,38,34,.88),rgba(41,38,34,.55) 60%,rgba(41,38,34,.7))}.fan-stage img{width:120px}}
 
-/* Steps */
-.steps{display:grid;gap:20px;padding:10px var(--pad) 40px}
-@media(min-width:900px){.steps{grid-template-columns:repeat(3,1fr)}}
-.step{background:var(--card);border-radius:var(--r-card);padding:30px;min-height:250px;display:flex;flex-direction:column;justify-content:space-between;gap:30px}
-.step .n{font-family:var(--serif);color:var(--red);font-size:90px;line-height:.8}
-.step h3{font-weight:400;font-size:22px;color:var(--red);letter-spacing:.017em;margin-bottom:6px}
+/* Signature */
+.sig{display:grid;grid-template-columns:1fr;margin-top:120px}
+@media(min-width:960px){.sig{grid-template-columns:.9fr 1.1fr}}
+.sig-l{background:var(--onyx);padding:var(--g)}
+.menu-card{background:var(--saffron);padding:var(--g);min-height:100%;display:flex;flex-direction:column;gap:26px}
+.menu-card header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.menu-card header svg{width:34px;height:34px;flex:none}
+.items{list-style:none;border-top:1px solid rgba(44,44,44,.45)}
+.items li{display:grid;grid-template-columns:1fr auto;gap:4px 20px;padding:12px 0;border-bottom:1px solid rgba(44,44,44,.45);align-items:start}
+.items li b{font-weight:500;font-size:14px}
+.items li p{grid-column:1/2;font-size:13px;color:#3d3832;max-width:440px}
+.add{grid-row:1/3;grid-column:2;align-self:center;background:none;border:1px solid var(--onyx);border-radius:3px;padding:8px 12px;font-size:12px;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background .4s var(--ease),color .4s var(--ease)}
+.add:hover,.add.on{background:var(--onyx);color:var(--saffron)}
+.menu-card .btn{margin-top:auto;width:100%}
+.sig-r{display:flex;flex-direction:column}
+.sig-r .txt{padding:clamp(28px,3vw,40px) var(--g) 60px}
+.sig-r .txt p{margin:14px 0 22px}
+.sig-r .ph{flex:1;min-height:420px;position:relative;overflow:hidden}
+.sig-r .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 
-/* Events chips */
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips span{border:1px solid var(--red);color:var(--red);border-radius:var(--r-pill);padding:5px 14px;font-size:14px}
+/* Catering */
+.cater{background:var(--linen);padding:120px var(--g) 50px}
+.cater-h{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px}
+.cater-h .cap:first-child{justify-self:end}
+.cater-h h2{text-align:center}
+.cater>p{text-align:center;max-width:470px;margin:22px auto 70px;font-size:14px}
+.cards3{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:760px){.cards3{grid-template-columns:repeat(3,1fr)}}
+.c3 .im{aspect-ratio:1.55/1;overflow:hidden}
+.c3 .im img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.c3:hover .im img{transform:scale(1.04)}
+.c3 h3{font-family:var(--serif);font-weight:400;font-size:24px;letter-spacing:-.006em;text-align:center;margin-top:14px}
+.c3 p{text-align:center;font-size:13px;max-width:340px;margin:4px auto 0;color:var(--espresso)}
+@media(max-width:760px){.cater-h{grid-template-columns:1fr}.cater-h .cap{display:none}}
 
-/* Callback */
-.callback{border-top:1px solid var(--red);margin:20px var(--pad) 0;padding-top:16px}
-.callback form{display:grid;grid-template-columns:1fr;gap:10px;margin-top:26px}
-@media(min-width:700px){.callback form{grid-template-columns:1fr auto}}
-.field{border:1px solid var(--red);border-radius:var(--r-pill);padding:12px 26px;font-size:clamp(18px,2vw,30px);color:var(--red);background:none;width:100%;outline:none}
-.field::placeholder{color:var(--red);opacity:1}
-.callback .btn{font-size:clamp(18px,2vw,30px);padding:12px 40px}
+/* Split (drinks-like) */
+.split2{display:grid;grid-template-columns:1fr;gap:14px;padding:8px var(--g) 0}
+@media(min-width:960px){.split2{grid-template-columns:.8fr 1.2fr}}
+.split2 .txt{padding:22px 0;display:flex;flex-direction:column;justify-content:space-between;gap:60px}
+.split2 .txt p{margin:14px 0 22px}
+.plain{list-style:none;border-top:1px solid var(--onyx)}
+.plain li{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:10px 0 12px;border-bottom:1px solid var(--onyx)}
+.plain li small{display:block;color:var(--espresso);font-size:12px;margin-top:3px}
+.plain .add{grid-row:auto;grid-column:auto}
+.stack{display:grid;gap:14px}
+.stack div{aspect-ratio:1.45/1;overflow:hidden}
+.stack img{width:100%;height:100%;object-fit:cover}
+
+/* Marquee */
+.marquee{overflow:hidden;border-top:1px solid var(--stone);border-bottom:1px solid var(--stone);padding:16px 0;margin-top:120px}
+.marquee-t{display:flex;gap:46px;width:max-content;animation:mq 27s linear infinite}
+.marquee span{font-family:var(--serif);font-size:clamp(28px,3vw,44px);text-transform:uppercase;letter-spacing:-.03em;white-space:nowrap;display:flex;align-items:center;gap:46px}
+.marquee span::after{content:"✦";font-size:.5em;color:var(--saffron)}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee-t{animation:none}}
+
+/* Fan */
+.fan{padding:140px var(--g) 90px;text-align:center;position:relative;overflow:hidden}
+.fan-stage{position:relative;height:clamp(320px,40vw,480px);margin:30px auto 40px;max-width:640px}
+.fan-stage img{position:absolute;left:50%;top:50%;width:clamp(140px,22vw,240px);aspect-ratio:3/4;object-fit:cover;border-radius:6px;outline:1px solid rgba(44,44,44,.15);transition:transform .8s var(--ease)}
+.fan-stage img:nth-child(1){transform:translate(-120%,-62%) rotate(-24deg)}
+.fan-stage img:nth-child(2){transform:translate(-80%,-40%) rotate(-10deg)}
+.fan-stage img:nth-child(3){transform:translate(-50%,-56%) rotate(4deg)}
+.fan-stage img:nth-child(4){transform:translate(-20%,-36%) rotate(16deg)}
+.fan-stage img:nth-child(5){transform:translate(20%,-62%) rotate(28deg)}
+.fan:hover .fan-stage img:nth-child(1){transform:translate(-132%,-64%) rotate(-28deg)}
+.fan:hover .fan-stage img:nth-child(5){transform:translate(32%,-64%) rotate(32deg)}
+.fan .side{position:absolute;top:50%;font-size:12px;text-transform:uppercase}
+.fan .side.l{left:var(--g)}.fan .side.r{right:var(--g)}
+.fan-steps{display:grid;gap:14px;max-width:760px;margin:0 auto 26px;text-align:left}
+@media(min-width:760px){.fan-steps{grid-template-columns:repeat(3,1fr)}}
+.fan-steps div{border-top:1px solid var(--onyx);padding-top:10px}
+.fan-steps b{display:block;font-family:var(--serif);font-weight:400;font-size:26px;text-transform:uppercase;letter-spacing:-.03em;margin-bottom:4px}
+.fan-steps p{font-size:13px;color:var(--espresso)}
+@media(max-width:760px){.fan .side{display:none}}
+
+/* Rooted */
+.rooted{position:relative;min-height:max(560px,92vh);color:var(--parchment);overflow:hidden}
+.rooted img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rooted::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(41,38,34,.86),rgba(41,38,34,.45) 40%,rgba(41,38,34,.82))}
+.rooted h2{position:relative;z-index:2;padding:40px var(--g)}
+.rooted p{position:absolute;z-index:2;left:var(--g);right:var(--g);bottom:var(--g);max-width:390px;font-size:13px}
+.band{background:var(--walnut);height:56px}
+
+/* Who (guests-like) */
+.who{padding:110px var(--g) 30px}
+.who-h{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap;margin-bottom:60px}
+.who .widget{outline:1px solid var(--stone)}
+.who-row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,1fr);gap:12px;overflow-x:auto;scrollbar-width:none;padding:1px}
+.who-row::-webkit-scrollbar{display:none}
+.wcard{outline:1px solid var(--stone);padding:26px 22px 22px;min-height:380px;display:flex;flex-direction:column;justify-content:space-between}
+.wcard .top{display:flex;justify-content:space-between;color:var(--saffron);font-size:12px;text-transform:uppercase}
+.wcard .top span:last-child{color:var(--walnut)}
+.wcard q{display:block;font-family:var(--serif);font-size:26px;line-height:1.08;letter-spacing:-.01em;margin:18px 0;quotes:none}
+.wcard .by{font-size:12px;color:var(--walnut)}
+.wcard .by b{display:block;color:var(--onyx);font-weight:500;font-size:13px}
+.review{text-align:center;padding:90px var(--g) 80px;color:var(--espresso)}
+.review a{display:inline-block;margin-top:10px;color:var(--onyx);text-decoration:underline;text-underline-offset:3px}
 
 /* Footer */
-footer{margin-top:20px}
-.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:30px 20px;border-top:1px solid var(--red);margin:20px var(--pad) 0;padding:16px 0 40px;color:var(--red);font-size:17px;line-height:1.35}
-@media(min-width:900px){.fgrid{grid-template-columns:repeat(4,1fr)}}
-.fgrid h4{font-weight:400;margin-bottom:30px}
-.fgrid a:hover{opacity:.6}
-.fbottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;border-top:1px solid var(--red);margin:0 var(--pad);padding:12px 0;color:var(--red);font-size:12px;letter-spacing:.06em}
-.fnote{background:var(--red);color:#fff;border-radius:var(--r-card);margin:10px var(--pad) var(--pad);padding:14px 26px;font-size:14px;line-height:1.4}
+footer{background:var(--roast);color:var(--parchment);padding:50px var(--g) 20px}
+.f1{display:grid;grid-template-columns:1fr 1fr;text-align:center}
+@media(min-width:960px){.f1{grid-template-columns:1fr 1fr .8fr 1fr 1fr}}
+.f1>div{border-top:1px solid rgba(216,203,184,.25);border-bottom:1px solid rgba(216,203,184,.25);padding:22px 10px 40px;font-size:13px;line-height:1.5}
+.f1>div+div{border-left:1px solid rgba(216,203,184,.25)}
+.f1 h4{font-weight:500;font-size:12px;text-transform:uppercase;margin-bottom:34px}
+.f1 .mid{border:0!important;display:grid;place-items:center}
+.f1 .mid svg{width:44px;height:40px;color:var(--saffron)}
+@media(max-width:959px){.f1 .mid{display:none}.f1>div:nth-child(4){border-left:0}}
+.f2{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;text-align:center;padding:40px 0 60px;font-size:13px}
+@media(min-width:960px){.f2{grid-template-columns:repeat(4,1fr)}}
+.f2 h4{font-weight:500;margin-bottom:16px}
+.f2 a{display:block;line-height:1.7}
+.f2 a:hover,.f1 a:hover{color:var(--saffron)}
+.wordmark{font-family:var(--sans);font-weight:500;color:var(--saffron);font-size:clamp(40px,12.6vw,190px);line-height:.8;letter-spacing:-.016em;text-transform:uppercase;white-space:nowrap;text-align:center;margin:20px 0 40px;overflow:hidden}
+.f3{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px}
 
-/* Cart drawer */
-.scrim{position:fixed;inset:0;background:rgba(18,18,18,.35);opacity:0;pointer-events:none;transition:opacity .25s;z-index:80}
-.drawer{position:fixed;top:0;right:0;height:100%;width:min(520px,100%);background:var(--canvas);z-index:90;transform:translateX(100%);transition:transform .3s ease;display:flex;flex-direction:column;border-left:1px solid var(--red)}
+/* Drawer */
+.scrim{position:fixed;inset:0;background:rgba(41,38,34,.55);opacity:0;pointer-events:none;transition:opacity .4s var(--ease);z-index:80}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(520px,100%);background:var(--parchment);z-index:90;transform:translateX(100%);transition:transform .4s var(--ease);display:flex;flex-direction:column}
 body.cart-open .scrim{opacity:1;pointer-events:auto}
 body.cart-open .drawer{transform:none}
-.dhead{display:flex;justify-content:space-between;align-items:center;padding:18px var(--pad);border-bottom:1px solid var(--red);color:var(--red);font-size:17px}
-.dhead button{background:none;border:0;color:var(--red);font-size:17px;cursor:pointer}
-.dbody{flex:1;overflow-y:auto;padding:20px var(--pad) 30px}
-.dbody .display-md{font-size:56px;margin-bottom:6px}
-.empty{color:var(--ink);opacity:.75;margin:14px 0 24px}
-.lines{display:flex;flex-direction:column;gap:12px;margin:18px 0}
-.line{display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center;background:var(--card);border-radius:18px;padding:10px}
-.line img{width:64px;height:64px;border-radius:12px;object-fit:cover}
-.line b{font-weight:400;color:var(--red);display:block}
-.line small{opacity:.7;font-size:12px}
+.dhead{display:flex;justify-content:space-between;align-items:center;padding:20px var(--g);background:var(--onyx);color:var(--parchment);font-size:12px;text-transform:uppercase}
+.dhead button{background:none;border:0;color:var(--parchment);cursor:pointer;text-transform:uppercase;font-size:12px}
+.dbody{flex:1;overflow-y:auto;padding:28px var(--g) 36px}
+.empty{color:var(--espresso);margin:12px 0 20px}
+.lines{list-style:none;border-top:1px solid var(--onyx);margin-top:18px}
+.lines li{display:grid;grid-template-columns:54px 1fr auto;gap:14px;align-items:center;padding:10px 0;border-bottom:1px solid var(--onyx)}
+.lines img{width:54px;height:54px;object-fit:cover}
+.lines small{display:block;color:var(--espresso);font-size:12px}
 .qty{display:flex;align-items:center;gap:6px}
-.qty button{width:30px;height:30px;border-radius:50%;border:1px solid var(--red);background:var(--canvas);color:var(--red);cursor:pointer;font-size:16px;line-height:1}
-.qty input{width:52px;text-align:center;border:1px solid var(--red);border-radius:var(--r-pill);padding:4px;background:var(--canvas);color:var(--red)}
-.total{display:flex;justify-content:space-between;border-top:1px solid var(--red);padding-top:12px;color:var(--red);font-size:17px}
-.warn{color:var(--red);font-size:13px;margin-top:6px;min-height:1em}
+.qty button{width:30px;height:30px;border:1px solid var(--onyx);background:none;border-radius:3px;cursor:pointer}
+.qty input{width:52px;height:30px;text-align:center;border:1px solid var(--onyx);border-radius:3px;background:none}
+.total{display:flex;justify-content:space-between;padding:12px 0;font-size:13px;text-transform:uppercase}
+.warn{color:#8a4f12;font-size:13px;min-height:1em}
 .oform{display:grid;gap:12px;margin-top:22px}
-.oform label{display:grid;gap:6px;font-size:13px;color:var(--red);letter-spacing:.04em}
-.oform input,.oform select,.oform textarea{border:1px solid var(--red);border-radius:16px;padding:11px 16px;background:var(--canvas);color:var(--ink);font-size:16px;outline:none}
+.oform label{display:grid;gap:6px;font-size:12px;text-transform:uppercase;color:var(--espresso);min-width:0}
+.oform input,.oform select,.oform textarea{width:100%;min-width:0;border:1px solid var(--onyx);border-radius:3px;padding:12px 14px;background:rgba(255,255,255,.18);font-size:15px;text-transform:none;color:var(--onyx);outline:none}
+.oform input:focus,.oform select:focus,.oform textarea:focus{border-color:var(--saffron)}
 .oform textarea{min-height:90px;resize:vertical}
-.oform input,.oform select,.oform textarea{width:100%;min-width:0}
-.oform label{min-width:0}
-.oform .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.oform .btn{width:100%;margin-top:6px}
-.fine{font-size:12px;opacity:.75;line-height:1.45;margin-top:6px}
-.sent{display:none;background:var(--card);border-radius:var(--r-card);padding:24px;margin-top:20px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.oform .btn{width:100%;margin-top:8px}
+.fine{font-size:12px;color:var(--espresso);line-height:1.45}
+.sent{display:none;outline:1px solid var(--stone);padding:24px;margin-top:20px}
 .sent.show{display:block}
-.sent h3{font-family:var(--serif);font-weight:400;color:var(--red);font-size:40px;line-height:1}
-
-.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,40px);opacity:0;background:var(--red);color:#fff;border-radius:var(--r-pill);padding:10px 22px;font-size:14px;z-index:95;transition:all .25s;pointer-events:none}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);opacity:0;background:var(--onyx);color:var(--parchment);border-radius:3px;padding:12px 20px;font-size:13px;z-index:95;transition:all .4s var(--ease);pointer-events:none;box-shadow:0 0 0 1px var(--saffron);max-width:calc(100% - 32px)}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 </style>
 </head>
 <body>
 
-<div class="announce">
-  <span class="left">Click &amp; collect réservé aux grosses commandes</span>
-  <span class="mid">Boulanger · Pâtissier · Traiteur</span>
-  <nav aria-label="Liens rapides"><a href="#boutique">La boutique</a><a href="#entreprises">Entreprises</a><a href="#contact">Contact</a></nav>
-</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 44 40"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 30c3-11 10-17 18-17s15 6 18 17c-6-3-12-3-18 1-6-4-12-4-18-1z"/><path d="M15 16.5l2.4 12M22 14v15M29 16.5l-2.4 12"/><path d="M22 10V3M19 5.5l3-2.5 3 2.5M8 36h28"/></g></symbol>
+  <symbol id="bag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></g></symbol>
+  <symbol id="whisk" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 20 13 11"/><path d="M13 11c1-4 4-7 7-7 0 3-3 6-7 7zM20 20l-9-9"/><path d="M11 11c-1-4-4-7-7-7 0 3 3 6 7 7"/></g></symbol>
+</svg>
 
-<header>
-  <div class="head">
-    <a class="logo" href="#top" aria-label="Boulangerie de l'Hippodrome — accueil">
-      <svg viewBox="0 0 44 30" aria-hidden="true"><path d="M2 26C6 11 14 4 22 4s16 7 20 22c-7-4-13-4-20 1C15 22 9 22 2 26Z" fill="#e82c2a"/><path d="M15 9.5l2.2 13M22 7.5v15M29 9.5l-2.2 13" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
-      <span>L'Hippodrome</span>
-    </a>
-    <nav class="mainnav" aria-label="Navigation principale">
-      <a href="#trompe-loeil">Trompe-l'œil</a>
-      <a href="#patisserie">Pâtisserie</a>
+<header class="nav">
+  <div class="nav-l">
+    <a href="#top" aria-label="Boulangerie de l'Hippodrome — accueil"><svg class="mark"><use href="#mark"/></svg></a>
+    <nav class="links" aria-label="Navigation principale">
+      <a href="#top">Accueil</a>
       <a href="#traiteur">Traiteur</a>
-      <a href="#comment">Click &amp; collect</a>
+      <a href="#signatures">Trompe-l'œil</a>
+      <a href="#maison">La maison</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <div class="headright">
-      <button type="button" id="cartBtn" aria-haspopup="dialog">Commande (<span id="cartCount">0</span>)</button>
-      <button type="button" id="menuBtn" aria-expanded="false" aria-controls="mobnav">Menu</button>
-    </div>
   </div>
-  <nav class="mobnav" id="mobnav" aria-label="Menu mobile">
-    <a href="#trompe-loeil">Trompe-l'œil</a>
-    <a href="#patisserie">Pâtisserie</a>
-    <a href="#traiteur">Traiteur</a>
-    <a href="#comment">Click &amp; collect</a>
-    <a href="#entreprises">Entreprises</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="nav-r">
+    <a class="hide-s" href="#signatures">Carte</a>
+    <a class="sq hide-s" href="#signatures" aria-label="Voir la carte"><svg><use href="#whisk"/></svg></a>
+    <span class="vr hide-s"></span>
+    <button class="txtbtn" type="button" data-open-cart>Commander</button>
+    <button class="sq" type="button" data-open-cart aria-label="Ma commande"><svg><use href="#bag"/></svg><span class="badge" id="cartCount" hidden>0</span></button>
+  </div>
 </header>
 
 <main id="top">
 
-  <!-- HERO -->
-  <section class="split hero">
-    <div class="txt">
-      <h1 class="display">Pour les grandes tablées</h1>
-      <div>
-        <p class="lede">Mariages, anniversaires, séminaires, fêtes de quartier&nbsp;: commandez en ligne vos trompe-l'œil, plateaux et buffets, et récupérez tout en boutique, prêt à servir.</p>
-        <div class="btn-row" style="margin-top:20px">
-          <a class="btn" href="#trompe-loeil">Composer ma commande</a>
+  <section class="hero">
+    <img src="img/vitrine-trompe-loeil.jpg" alt="" fetchpriority="high">
+    <div class="hero-c">
+      <span class="cap">Boulanger · Pâtissier · Traiteur</span>
+      <h1 class="serif d-xl">L'art du<br>trompe-l'œil</h1>
+      <span class="cap">Toulouse · Hippodrome</span>
+    </div>
+    <div class="hero-foot">
+      <p>À la Boulangerie de l'Hippodrome, chaque pâtisserie est façonnée à la main pour surprendre. Pour vos mariages, anniversaires et événements d'entreprise, commandez en ligne et retirez votre commande en boutique.</p>
+      <div class="widget">
+        <div class="widget-top"><span>Click &amp; collect</span><span>✦</span></div>
+        <div class="widget-b">
+          <span class="big">7j<sup>/7</sup></span>
+          <small><b>Grosses commandes</b>Retrait en boutique de 7h à 20h</small>
         </div>
       </div>
     </div>
-    <div class="media"><img src="img/vitrine-trompe-loeil.jpg" alt="Vitrine de pâtisseries trompe-l'œil : citrons, cerises, fraises, poires, figues" width="1390" height="780"></div>
   </section>
 
-  <!-- ROW 1 -->
-  <div class="run" id="trompe-loeil"><span>Trompe-l'œil</span><a class="arrow" href="#comment">Comment commander <svg viewBox="0 0 30 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M0 7h28M22 1l6 6-6 6"/></svg></a></div>
-  <div class="row" data-row>
-    <article class="prod" data-id="citron"><div class="pic"><img src="img/citrons.jpg" alt="Trompe-l'œil citron" loading="lazy"></div><div class="meta"><div><h3>Citron</h3><p>Trompe-l'œil · à la pièce</p></div><button class="add" aria-label="Ajouter Citron">+</button></div></article>
-    <article class="prod" data-id="cerise"><div class="pic"><img src="img/cerises.jpg" alt="Trompe-l'œil cerise" loading="lazy"></div><div class="meta"><div><h3>Cerise</h3><p>Trompe-l'œil · à la pièce</p></div><button class="add" aria-label="Ajouter Cerise">+</button></div></article>
-    <article class="prod" data-id="mangue"><div class="pic"><img src="img/mangues.jpg" alt="Trompe-l'œil mangue" loading="lazy"></div><div class="meta"><div><h3>Mangue</h3><p>Trompe-l'œil · à la pièce</p></div><button class="add" aria-label="Ajouter Mangue">+</button></div></article>
-    <article class="prod" data-id="fraise"><div class="pic"><img src="img/fraises-poires.jpg" alt="Trompe-l'œil fraise et poire" loading="lazy"></div><div class="meta"><div><h3>Fraise &amp; poire</h3><p>Trompe-l'œil · à la pièce</p></div><button class="add" aria-label="Ajouter Fraise et poire">+</button></div></article>
-    <article class="prod" data-id="assortiment"><div class="pic"><img src="img/boite-trompe-loeil.jpg" alt="Boîte assortie de trompe-l'œil : cabosse, mangue, fraise, citron" loading="lazy"></div><div class="meta"><div><h3>Boîte assortie</h3><p>Le choix du chef · à la pièce</p></div><button class="add" aria-label="Ajouter Boîte assortie">+</button></div></article>
-  </div>
-
-  <!-- SPLIT A -->
-  <div class="run"><span>Plateaux</span><a class="arrow" href="#trompe-loeil">Choisir <svg viewBox="0 0 30 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M0 7h28M22 1l6 6-6 6"/></svg></a></div>
-  <section class="split flip">
-    <div class="media"><img src="img/vitrine.jpg" alt="Vitrine de trompe-l'œil alignés : pistache, fraise, citron, chocolat, mangue" loading="lazy" width="1600" height="900"></div>
-    <div class="txt center">
-      <h2 class="display-md">Une vitrine entière, rien que pour vous</h2>
-      <p class="lede">Chaque trompe-l'œil est façonné à la main dans notre laboratoire. Pour vos événements, nous préparons vos plateaux sur mesure : un seul parfum ou un assortiment, en quantité, dressés et prêts à poser sur la table.</p>
-    </div>
-  </section>
-
-  <!-- ROW 2 -->
-  <div class="run" id="patisserie">
-    <div class="arrows"><button type="button" data-prev aria-label="Précédent"><svg viewBox="0 0 30 14" width="30" height="14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M30 7H2M8 1L2 7l6 6"/></svg></button><button type="button" data-next aria-label="Suivant"><svg viewBox="0 0 30 14" width="30" height="14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M0 7h28M22 1l6 6-6 6"/></svg></button></div>
-    <span class="mid">Pâtisserie &amp; boulangerie</span>
-    <a class="arrow" href="#comment">Commander <svg viewBox="0 0 30 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M0 7h28M22 1l6 6-6 6"/></svg></a>
-  </div>
-  <div class="row" data-row id="row2">
-    <article class="prod" data-id="tartelettes"><div class="pic"><img src="img/tartelettes.jpg" alt="Tartelettes aux fraises et pâtisseries en vitrine" loading="lazy"></div><div class="meta"><div><h3>Tartelettes &amp; individuels</h3><p>Pâtisserie · à la pièce</p></div><button class="add" aria-label="Ajouter Tartelettes">+</button></div></article>
-    <article class="prod" data-id="flan"><div class="pic"><img src="img/flan-tarte.jpg" alt="Flan pâtissier et tartelette" loading="lazy"></div><div class="meta"><div><h3>Flan pâtissier</h3><p>Pâtisserie · à la part</p></div><button class="add" aria-label="Ajouter Flan pâtissier">+</button></div></article>
-    <article class="prod" data-id="entremets-citron"><div class="pic"><img src="img/citron-boite.jpg" alt="Deux entremets citron en boîte" loading="lazy"></div><div class="meta"><div><h3>Entremets citron</h3><p>Pâtisserie · à la pièce</p></div><button class="add" aria-label="Ajouter Entremets citron">+</button></div></article>
-    <article class="prod" data-id="pistache"><div class="pic"><img src="img/pistache.jpg" alt="Rangée de pâtisseries vertes en vitrine" loading="lazy"></div><div class="meta"><div><h3>Assortiment vitrine</h3><p>Selon la production du jour</p></div><button class="add" aria-label="Ajouter Assortiment vitrine">+</button></div></article>
-    <article class="prod" data-id="viennoiseries"><div class="pic"><img src="img/offre-3plus1.jpg" alt="Affiche en vitrine : viennoiseries et baguettes 3 achetées, 1 offerte" loading="lazy"></div><div class="meta"><div><h3>Baguettes &amp; viennoiseries</h3><p>En nombre, pour les petits-déjeuners</p></div><button class="add" aria-label="Ajouter Baguettes et viennoiseries">+</button></div></article>
-  </div>
-
-  <!-- SPLIT B : Traiteur -->
-  <div class="run" id="traiteur"><span>Traiteur</span><a class="arrow" href="#entreprises">Demander un devis <svg viewBox="0 0 30 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M0 7h28M22 1l6 6-6 6"/></svg></a></div>
-  <section class="split">
-    <div class="txt">
-      <h2 class="display-md">Buffets, pièces montées &amp; sweet tables</h2>
-      <div>
-        <p class="lede">Boulanger, pâtissier et traiteur&nbsp;: nous préparons aussi le salé, les pièces montées et les sweet tables de vos grandes occasions. Racontez-nous l'événement, nous composons la table avec vous.</p>
-        <div class="chips" style="margin-top:22px"><span>Mariage</span><span>Baptême</span><span>Anniversaire</span><span>Communion</span><span>Séminaire</span><span>Fête de fin d'année</span></div>
+  <section class="inset" id="maison">
+    <div class="inset-in">
+      <img src="img/vitrine.jpg" alt="Vitrine de trompe-l'œil alignés : pistache, fraise, citron, chocolat, mangue" loading="lazy">
+      <div class="inset-txt">
+        <h2 class="serif d-lg" style="font-weight:300">L'esprit de la<br>pâtisserie fine</h2>
+        <p>Du pain du matin aux créations les plus spectaculaires, chaque pièce raconte notre savoir-faire.</p>
+        <a class="btn btn-light" href="#traiteur">Nos prestations</a>
       </div>
     </div>
-    <div class="media" style="aspect-ratio:1.1/1"><img src="img/devanture.jpg" alt="Devanture de la Boulangerie de l'Hippodrome : Boulanger, Pâtissier, Traiteur" loading="lazy"></div>
   </section>
 
-  <!-- HOW IT WORKS -->
-  <div class="run" id="comment"><span>Click &amp; collect</span><button class="arrow" type="button" data-open-cart style="background:none;border:0;cursor:pointer;font-size:17px">Ma commande <svg viewBox="0 0 30 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M0 7h28M22 1l6 6-6 6"/></svg></button></div>
-  <section class="split" style="padding-bottom:0">
-    <div class="txt" style="padding-bottom:0"><h2 class="display-md">Commandez en ligne, récupérez en boutique</h2></div>
-    <div class="txt center" style="padding-bottom:0"><p class="lede ink">Le click &amp; collect est réservé aux commandes importantes. Pour votre baguette du jour, la boutique vous accueille comme d'habitude, 7 jours sur 7.</p></div>
+  <section class="sig" id="signatures">
+    <div class="sig-l">
+      <div class="menu-card">
+        <header><h2 class="serif d-md">Trompe-l'œil<br>signatures</h2><svg aria-hidden="true"><use href="#whisk"/></svg></header>
+        <ul class="items">
+          <li data-id="citron" data-img="img/citrons.jpg"><b>Citron</b><button class="add" type="button">Ajouter</button><p>Un citron plus vrai que nature, à la coque lisse et éclatante.</p></li>
+          <li data-id="cerise" data-img="img/cerises.jpg"><b>Cerise</b><button class="add" type="button">Ajouter</button><p>Rouge brillant, tige en chocolat : la gourmandise en trompe-l'œil.</p></li>
+          <li data-id="mangue" data-img="img/mangues.jpg"><b>Mangue</b><button class="add" type="button">Ajouter</button><p>Un dégradé vert, jaune et rouge, comme un fruit tout juste cueilli.</p></li>
+          <li data-id="fraise-poire" data-img="img/fraises-poires.jpg"><b>Fraise &amp; poire</b><button class="add" type="button">Ajouter</button><p>Deux classiques du verger, revisités par nos pâtissiers.</p></li>
+          <li data-id="assortiment" data-img="img/boite-trompe-loeil.jpg"><b>Boîte assortie</b><button class="add" type="button">Ajouter</button><p>Cabosse, mangue, fraise, citron : l'assortiment du chef pour vos invités.</p></li>
+          <li data-id="vitrine" data-img="img/pistache.jpg"><b>Assortiment vitrine</b><button class="add" type="button">Ajouter</button><p>Une sélection selon la production du jour, à composer avec nous.</p></li>
+        </ul>
+        <a class="btn btn-dark" href="#" data-open-cart>Voir ma commande</a>
+      </div>
+    </div>
+    <div class="sig-r">
+      <div class="txt">
+        <h2 class="serif d-lg">Fait main.<br>Fait pour surprendre.</h2>
+        <p class="body">Nos trompe-l'œil font sensation sur les réseaux : des fruits plus vrais que nature, façonnés et décorés à la main dans notre laboratoire. Pour un événement, nous les préparons en quantité, en un seul parfum ou en assortiment, prêts à servir.</p>
+        <a class="btn btn-dark" href="#" data-open-cart>Commander en click &amp; collect</a>
+      </div>
+      <div class="ph"><img src="img/boite-trompe-loeil.jpg" alt="Boîte de trompe-l'œil : cabosse de cacao, mangue, fraise, citron" loading="lazy"></div>
+    </div>
   </section>
-  <div class="steps">
-    <div class="step"><span class="n">1</span><div><h3>Composez</h3><p>Ajoutez les produits et les quantités souhaitées. Commande à partir de <b id="minLabel">20</b> pièces au total.</p></div></div>
-    <div class="step"><span class="n">2</span><div><h3>Nous confirmons</h3><p>Nous revenons vers vous pour valider les quantités, le prix et le jour de retrait. Rien n'est débité en ligne.</p></div></div>
-    <div class="step"><span class="n">3</span><div><h3>Vous récupérez</h3><p>Votre commande vous attend au 5 rue Joachim du Bellay, à l'heure convenue, entre 7h et 20h.</p></div></div>
-  </div>
 
-  <!-- ENTREPRISES -->
-  <div class="run" id="entreprises"><span>Entreprises &amp; associations</span><a class="arrow" href="#rappel">Être rappelé <svg viewBox="0 0 30 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M0 7h28M22 1l6 6-6 6"/></svg></a></div>
-  <section class="split">
-    <div class="txt"><h2 class="display">Un séminaire&nbsp;? Ou juste beaucoup de croissants&nbsp;?</h2></div>
-    <div class="txt center"><p class="lede">Petits-déjeuners d'équipe, réunions, inaugurations, événements associatifs&nbsp;: on s'occupe des viennoiseries, du salé et du sucré pour tout le monde. Laissez-nous votre numéro, nous vous rappelons pour organiser ça ensemble.</p></div>
+  <section class="cater" id="traiteur">
+    <div class="cater-h">
+      <span class="cap">Événements</span>
+      <h2 class="serif d-xl" style="font-weight:300">Traiteur<br>à notre façon</h2>
+      <span class="cap">Sur mesure</span>
+    </div>
+    <p>Mariage, baptême, anniversaire, séminaire ou fête d'association : nous composons vos plateaux sucrés et salés, vos pièces montées et vos sweet tables. Vous commandez en ligne, nous préparons tout, vous récupérez en boutique.</p>
+    <div class="cards3">
+      <article class="c3"><div class="im"><img src="img/cat-plateaux.jpg" alt="Plateau de trompe-l'œil mangue et chocolat" loading="lazy"></div><h3>Plateaux de trompe-l'œil</h3><p>Un parfum ou un assortiment, dressés en quantité pour tous vos invités.</p></article>
+      <article class="c3"><div class="im"><img src="img/cat-sweet.jpg" alt="Tartelettes aux fraises, poires et cerises en trompe-l'œil" loading="lazy"></div><h3>Pièces montées &amp; sweet tables</h3><p>Le grand moment sucré de la fête, imaginé avec vous selon l'occasion.</p></article>
+      <article class="c3"><div class="im"><img src="img/cat-tartes.jpg" alt="Flan pâtissier et tartelette en boîte" loading="lazy"></div><h3>Buffets &amp; traiteur</h3><p>Formules, salé, desserts : de quoi régaler une équipe ou toute une famille.</p></article>
+    </div>
   </section>
 
-  <!-- CALLBACK -->
-  <section class="callback" id="rappel">
-    <h2 class="display">Une grosse commande&nbsp;? On vous rappelle.</h2>
-    <form id="callbackForm">
-      <input class="field" type="tel" name="tel" required placeholder="Votre numéro de téléphone" autocomplete="tel" aria-label="Votre numéro de téléphone">
-      <button class="btn" type="submit">Être rappelé</button>
-    </form>
+  <section class="split2">
+    <div class="txt">
+      <div>
+        <h2 class="serif d-lg">Les pâtisseries<br>qui complètent<br>la fête</h2>
+        <p class="body">Entremets, tartelettes, flans, viennoiseries en nombre : tout ce qu'il faut autour des trompe-l'œil pour un buffet complet.</p>
+        <a class="btn btn-dark" href="#" data-open-cart>Ouvrir ma commande</a>
+      </div>
+      <ul class="plain">
+        <li data-id="tartelettes" data-img="img/tartelettes.jpg"><span><b style="font-weight:500">Tartelettes &amp; individuels</b><small>Fraises, fruits de saison, selon la vitrine du jour</small></span><button class="add" type="button">Ajouter</button></li>
+        <li data-id="entremets-citron" data-img="img/citron-boite.jpg"><span><b style="font-weight:500">Entremets citron</b><small>Glaçage jaune soleil, cœur acidulé</small></span><button class="add" type="button">Ajouter</button></li>
+        <li data-id="flan" data-img="img/flan-tarte.jpg"><span><b style="font-weight:500">Flan pâtissier</b><small>À la part ou entier, pour les grandes tablées</small></span><button class="add" type="button">Ajouter</button></li>
+        <li data-id="viennoiseries" data-img="img/offre-3plus1.jpg"><span><b style="font-weight:500">Viennoiseries &amp; baguettes en nombre</b><small>Pour les petits-déjeuners d'équipe et les réceptions</small></span><button class="add" type="button">Ajouter</button></li>
+      </ul>
+    </div>
+    <div class="stack">
+      <div><img src="img/citron-boite.jpg" alt="Deux entremets citron dans leur boîte" loading="lazy"></div>
+      <div><img src="img/stack-citrons.jpg" alt="Trompe-l'œil citrons, cerises et figues en vitrine" loading="lazy"></div>
+    </div>
   </section>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee-t">
+    <span>Citron</span><span>Cerise</span><span>Mangue</span><span>Fraise &amp; poire</span><span>Pièces montées</span><span>Sweet tables</span><span>Traiteur</span>
+    <span>Citron</span><span>Cerise</span><span>Mangue</span><span>Fraise &amp; poire</span><span>Pièces montées</span><span>Sweet tables</span><span>Traiteur</span>
+  </div></div>
+
+  <section class="fan" id="commander">
+    <h2 class="serif d-lg">Offrez-vous<br>une vitrine entière</h2>
+    <span class="side l">Commandez en ligne.</span>
+    <span class="side r">Retirez en boutique.</span>
+    <div class="fan-stage" aria-hidden="true">
+      <img src="img/citrons.jpg" alt=""><img src="img/cerises.jpg" alt=""><img src="img/fraises-poires.jpg" alt=""><img src="img/mangues.jpg" alt=""><img src="img/pistache.jpg" alt="">
+    </div>
+    <div class="fan-steps">
+      <div><b>1. Composez</b><p>Ajoutez vos créations. Click &amp; collect à partir de <span id="minLabel">20</span> pièces.</p></div>
+      <div><b>2. On confirme</b><p>Nous vous recontactons pour valider le prix et le jour de retrait.</p></div>
+      <div><b>3. Retirez</b><p>Au 5 rue Joachim du Bellay, entre 7h et 20h, 7 jours sur 7.</p></div>
+    </div>
+    <button class="btn btn-dark" type="button" data-open-cart>Commander</button>
+  </section>
+
+  <section class="rooted">
+    <img src="img/devanture-large.jpg" alt="Devanture de la Boulangerie de l'Hippodrome, terrasse et enseigne Boulanger Pâtissier Traiteur" loading="lazy">
+    <h2 class="serif d-xl" style="font-weight:300">Ancrée dans<br>le quartier</h2>
+    <p>Au pied des immeubles du quartier de l'hippodrome, notre boutique vous accueille tous les jours de 7h à 20h : baguettes, viennoiseries, formules du midi, et une terrasse pour prendre le temps. Le click &amp; collect est réservé aux grosses commandes ; pour le quotidien, on vous attend en boutique.</p>
+  </section>
+  <div class="band"></div>
+
+  <section class="who">
+    <div class="who-h">
+      <h2 class="serif d-lg">Pour tous vos<br>grands moments</h2>
+      <a class="widget" href="https://www.tiktok.com/@boulangeriehippodrome" target="_blank" rel="noopener">
+        <div class="widget-top"><span>Sur TikTok</span><span>@boulangeriehippodrome</span></div>
+        <div class="widget-b"><span class="big">7&nbsp;262</span><small><b>Abonnés</b>Nos créations en vidéo</small></div>
+      </a>
+    </div>
+    <div class="who-row">
+      <article class="wcard"><div class="top"><span>✦</span><span>Mariage</span></div><q>Une pièce montée et une sweet table qui font lever les téléphones.</q><div class="by"><b>Pièces montées</b>Sur devis, imaginées avec vous</div></article>
+      <article class="wcard"><div class="top"><span>✦</span><span>Anniversaire</span></div><q>Des trompe-l'œil à partager, pour un dessert dont on parle encore.</q><div class="by"><b>Plateaux</b>Un parfum ou un assortiment</div></article>
+      <article class="wcard"><div class="top"><span>✦</span><span>Entreprise</span></div><q>Un petit-déjeuner d'équipe ou un séminaire, prêt à l'heure.</q><div class="by"><b>Viennoiseries &amp; buffets</b>Retrait dès 7h</div></article>
+      <article class="wcard"><div class="top"><span>✦</span><span>Association</span></div><q>Fêtes de quartier, kermesses, galas : on régale tout le monde.</q><div class="by"><b>Grosses quantités</b>Commandez en ligne</div></article>
+    </div>
+  </section>
+  <div class="review">Vous préparez un événement et avez une question&nbsp;?<br><a href="mailto:boulangeriedelhippodrome@caramail.fr">Écrivez-nous, nous vous répondons</a></div>
 
 </main>
 
 <footer id="contact">
-  <div class="fgrid">
-    <div><h4>La boutique</h4><a href="https://www.google.com/maps/search/?api=1&query=Boulangerie+de+l%27Hippodrome+5+rue+Joachim+du+Bellay+31100+Toulouse" target="_blank" rel="noopener">5 rue Joachim du Bellay<br>31100 Toulouse</a></div>
-    <div><h4>Horaires</h4><p>Ouvert 7 jours sur 7<br>de 7h à 20h</p></div>
-    <div><h4>Nous écrire</h4><a href="mailto:boulangeriedelhippodrome@caramail.fr" style="overflow-wrap:anywhere">boulangeriedelhippodrome@caramail.fr</a></div>
-    <div><h4>Suivre</h4><a href="https://www.tiktok.com/@boulangeriehippodrome" target="_blank" rel="noopener">TikTok</a><br><a href="https://www.google.com/maps/dir/?api=1&destination=Boulangerie+de+l%27Hippodrome%2C+5+rue+Joachim+du+Bellay%2C+31100+Toulouse" target="_blank" rel="noopener">Itinéraire</a></div>
+  <div class="f1">
+    <div><h4>Adresse</h4><a href="https://www.google.com/maps/search/?api=1&query=Boulangerie+de+l%27Hippodrome+5+rue+Joachim+du+Bellay+31100+Toulouse" target="_blank" rel="noopener">5 rue Joachim du Bellay<br>31100 Toulouse</a><br><br>Métro A Bagatelle<br>Bus 13 · arrêt Ronsard</div>
+    <div><h4>Horaires</h4>Lundi — dimanche<br>7h — 20h<br><br>Click &amp; collect<br>retrait aux heures d'ouverture</div>
+    <div class="mid"><svg><use href="#mark"/></svg></div>
+    <div><h4>Contact</h4><a href="mailto:boulangeriedelhippodrome@caramail.fr" style="overflow-wrap:anywhere">boulangeriedelhippodrome<br>@caramail.fr</a><br><br>Accès PMR</div>
+    <div><h4>Réseaux</h4><a href="https://www.tiktok.com/@boulangeriehippodrome" target="_blank" rel="noopener">TikTok</a><br><br>Nos créations<br>en vidéo</div>
   </div>
-  <div class="fbottom"><span>©<span id="year">2026</span> Boulangerie de l'Hippodrome. Artisan boulanger.</span><span>Accès PMR · Métro A Bagatelle · Bus 13 arrêt Ronsard</span></div>
-  <div class="fnote">Le click &amp; collect en ligne est réservé aux commandes importantes : événements, entreprises, fêtes de famille. Pour le pain et les viennoiseries du quotidien, nous vous accueillons en boutique tous les jours de 7h à 20h.</div>
+  <div class="f2">
+    <div><h4>Découvrir</h4><a href="#top">Accueil</a><a href="#signatures">Trompe-l'œil</a><a href="#traiteur">Traiteur</a><a href="#maison">La maison</a></div>
+    <div><h4>Commander</h4><a href="#" data-open-cart>Ma commande</a><a href="#commander">Comment ça marche</a></div>
+    <div><h4>Venir</h4><a href="https://www.google.com/maps/dir/?api=1&destination=Boulangerie+de+l%27Hippodrome%2C+5+rue+Joachim+du+Bellay%2C+31100+Toulouse" target="_blank" rel="noopener">Itinéraire</a><a href="#contact">Horaires</a></div>
+    <div><h4>Suivre</h4><a href="https://www.tiktok.com/@boulangeriehippodrome" target="_blank" rel="noopener">TikTok</a></div>
+  </div>
+  <div class="wordmark">L'Hippodrome</div>
+  <div class="f3"><span>© <span id="year">2026</span> Boulangerie de l'Hippodrome</span><span>Boulanger · Pâtissier · Traiteur</span><span>Toulouse</span></div>
 </footer>
 
-<!-- CART DRAWER -->
 <div class="scrim" data-close></div>
 <aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="dTitle" aria-hidden="true">
-  <div class="dhead"><span>Click &amp; collect</span><button type="button" data-close>Fermer</button></div>
+  <div class="dhead"><span>Click &amp; collect · grosses commandes</span><button type="button" data-close>Fermer ✕</button></div>
   <div class="dbody">
-    <h2 class="display-md" id="dTitle">Ma commande</h2>
-    <p class="empty" id="emptyMsg">Votre commande est vide. Ajoutez des produits avec le bouton <b>+</b>.</p>
-    <div class="lines" id="lines"></div>
+    <h2 class="serif d-md" id="dTitle">Ma commande</h2>
+    <p class="empty" id="emptyMsg">Votre commande est vide. Ajoutez des créations depuis la carte avec « Ajouter ».</p>
+    <ul class="lines" id="lines" hidden></ul>
     <div class="total" id="totalRow" hidden><span>Total</span><span><span id="totalPieces">0</span> pièces</span></div>
     <p class="warn" id="minWarn"></p>
-
     <form class="oform" id="orderForm" novalidate>
       <div class="two">
         <label>Retrait le<input type="date" name="date" required></label>
-        <label>Vers<select name="heure" required>
-          <option value="">Heure</option>
-          <option>7h – 9h</option><option>9h – 11h</option><option>11h – 13h</option><option>13h – 15h</option><option>15h – 17h</option><option>17h – 20h</option>
-        </select></label>
+        <label>Créneau<select name="heure" required><option value="">Choisir</option><option>7h – 9h</option><option>9h – 11h</option><option>11h – 13h</option><option>13h – 15h</option><option>15h – 17h</option><option>17h – 20h</option></select></label>
       </div>
       <label>Occasion<select name="occasion"><option>Anniversaire</option><option>Mariage</option><option>Baptême / communion</option><option>Entreprise / séminaire</option><option>Association</option><option>Autre</option></select></label>
       <label>Nom<input type="text" name="nom" required autocomplete="name"></label>
@@ -349,11 +459,11 @@ body.cart-open .drawer{transform:none}
         <label>Téléphone<input type="tel" name="tel" required autocomplete="tel"></label>
         <label>E-mail<input type="email" name="email" autocomplete="email"></label>
       </div>
-      <label>Précisions (parfums, nombre d'invités, allergies…)<textarea name="msg"></textarea></label>
-      <button class="btn" type="submit">Envoyer ma demande</button>
-      <p class="fine">Votre demande nous est envoyée par e-mail. Nous vous recontactons pour confirmer la disponibilité, le prix et l'heure de retrait. Paiement en boutique au moment du retrait.</p>
+      <label>Précisions<textarea name="msg" placeholder="Parfums, nombre d'invités, allergies…"></textarea></label>
+      <button class="btn btn-dark" type="submit">Envoyer ma demande</button>
+      <p class="fine">Aucun paiement en ligne. Nous vous recontactons pour confirmer la disponibilité, le prix et l'heure de retrait. Règlement en boutique.</p>
     </form>
-    <div class="sent" id="sent"><h3>Merci !</h3><p style="margin-top:10px">Votre messagerie s'est ouverte avec le récapitulatif de votre commande : il ne reste qu'à l'envoyer. Nous vous rappelons rapidement pour confirmer.</p></div>
+    <div class="sent" id="sent"><h3 class="serif d-md">Merci</h3><p style="margin-top:10px">Votre messagerie s'est ouverte avec le récapitulatif : il ne reste qu'à l'envoyer. Nous vous recontactons rapidement.</p></div>
   </div>
 </aside>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -361,105 +471,85 @@ body.cart-open .drawer{transform:none}
 <script>
 (function(){
   var EMAIL = 'boulangeriedelhippodrome@caramail.fr';
-  var MIN_PIECES = 20;
-  var STEP = 5;
+  var MIN_PIECES = 20, FIRST = 10, STEP = 5;
   document.getElementById('minLabel').textContent = MIN_PIECES;
   document.getElementById('year').textContent = new Date().getFullYear();
 
   var catalog = {};
-  document.querySelectorAll('.prod').forEach(function(p){
-    catalog[p.dataset.id] = { name: p.querySelector('h3').textContent, img: p.querySelector('img').getAttribute('src') };
+  document.querySelectorAll('[data-id]').forEach(function(li){
+    catalog[li.dataset.id] = { name: li.querySelector('b').textContent.trim(), img: li.dataset.img };
   });
 
   var cart = {};
-  try { cart = JSON.parse(localStorage.getItem('hippo-cart') || '{}'); } catch(e) { cart = {}; }
-  Object.keys(cart).forEach(function(k){ if(!catalog[k]) delete cart[k]; });
-
-  function save(){ try { localStorage.setItem('hippo-cart', JSON.stringify(cart)); } catch(e){} }
+  try { cart = JSON.parse(localStorage.getItem('hippo-cart2') || '{}'); } catch(e) { cart = {}; }
+  Object.keys(cart).forEach(function(k){ if (!catalog[k]) delete cart[k]; });
+  function save(){ try { localStorage.setItem('hippo-cart2', JSON.stringify(cart)); } catch(e){} }
   function total(){ return Object.keys(cart).reduce(function(s,k){ return s + cart[k]; }, 0); }
 
   function render(){
-    var lines = document.getElementById('lines'); lines.innerHTML = '';
+    var ul = document.getElementById('lines'); ul.innerHTML = '';
     var keys = Object.keys(cart);
     keys.forEach(function(k){
-      var it = catalog[k];
-      var el = document.createElement('div'); el.className = 'line';
-      el.innerHTML = '<img alt="" src="'+it.img+'"><div><b></b><small>pièces</small></div>' +
-        '<div class="qty"><button type="button" aria-label="Moins">−</button><input type="number" min="0" step="1" inputmode="numeric" aria-label="Quantité"><button type="button" aria-label="Plus">+</button></div>';
-      el.querySelector('b').textContent = it.name;
-      var input = el.querySelector('input'); input.value = cart[k];
-      var bs = el.querySelectorAll('.qty button');
-      bs[0].onclick = function(){ setQty(k, cart[k] - STEP); };
-      bs[1].onclick = function(){ setQty(k, cart[k] + STEP); };
-      input.onchange = function(){ setQty(k, parseInt(input.value, 10) || 0); };
-      lines.appendChild(el);
+      var it = catalog[k], li = document.createElement('li');
+      li.innerHTML = '<img alt=""><div><span></span><small>pièces</small></div><div class="qty"><button type="button" aria-label="Moins">−</button><input type="number" min="0" inputmode="numeric" aria-label="Quantité"><button type="button" aria-label="Plus">+</button></div>';
+      li.querySelector('img').src = it.img;
+      li.querySelector('span').textContent = it.name;
+      var inp = li.querySelector('input'); inp.value = cart[k];
+      var b = li.querySelectorAll('.qty button');
+      b[0].onclick = function(){ setQty(k, cart[k] - STEP); };
+      b[1].onclick = function(){ setQty(k, cart[k] + STEP); };
+      inp.onchange = function(){ setQty(k, parseInt(inp.value, 10) || 0); };
+      ul.appendChild(li);
     });
-    var t = total();
-    document.getElementById('cartCount').textContent = t;
+    var t = total(), badge = document.getElementById('cartCount');
+    badge.textContent = t; badge.hidden = t === 0;
+    ul.hidden = keys.length === 0;
     document.getElementById('emptyMsg').hidden = keys.length > 0;
     document.getElementById('totalRow').hidden = keys.length === 0;
     document.getElementById('totalPieces').textContent = t;
-    document.getElementById('minWarn').textContent = (keys.length && t < MIN_PIECES) ? ('Encore ' + (MIN_PIECES - t) + ' pièces pour atteindre le minimum de ' + MIN_PIECES + '.') : '';
-    document.querySelectorAll('.prod').forEach(function(p){ p.querySelector('.add').classList.toggle('done', !!cart[p.dataset.id]); });
+    document.getElementById('minWarn').textContent = (keys.length && t < MIN_PIECES) ? 'Encore ' + (MIN_PIECES - t) + ' pièces pour atteindre le minimum de ' + MIN_PIECES + '.' : '';
+    document.querySelectorAll('[data-id]').forEach(function(li){
+      var a = li.querySelector('.add'), q = cart[li.dataset.id];
+      a.classList.toggle('on', !!q); a.textContent = q ? q + ' pcs +' : 'Ajouter';
+    });
   }
   function setQty(k, q){ if (q <= 0) delete cart[k]; else cart[k] = q; save(); render(); }
 
-  var toastT;
-  function toast(msg){ var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(function(){ t.classList.remove('show'); }, 2200); }
+  var tt;
+  function toast(m){ var t = document.getElementById('toast'); t.textContent = m; t.classList.add('show'); clearTimeout(tt); tt = setTimeout(function(){ t.classList.remove('show'); }, 2200); }
 
-  document.querySelectorAll('.prod .add').forEach(function(b){
+  document.querySelectorAll('[data-id] .add').forEach(function(b){
     b.addEventListener('click', function(){
-      var k = b.closest('.prod').dataset.id;
-      cart[k] = (cart[k] || 0) + (cart[k] ? STEP : 10);
-      save(); render();
-      toast(catalog[k].name + ' : ' + cart[k] + ' pièces dans votre commande');
+      var k = b.closest('[data-id]').dataset.id;
+      cart[k] = cart[k] ? cart[k] + STEP : FIRST;
+      save(); render(); toast(catalog[k].name + ' · ' + cart[k] + ' pièces dans votre commande');
     });
   });
 
   var drawer = document.querySelector('.drawer');
-  function openCart(){ document.body.classList.add('cart-open'); drawer.setAttribute('aria-hidden','false'); }
+  function openCart(e){ if (e) e.preventDefault(); document.body.classList.add('cart-open'); drawer.setAttribute('aria-hidden','false'); }
   function closeCart(){ document.body.classList.remove('cart-open'); drawer.setAttribute('aria-hidden','true'); }
-  document.getElementById('cartBtn').onclick = openCart;
-  document.querySelectorAll('[data-open-cart]').forEach(function(b){ b.onclick = openCart; });
-  document.querySelectorAll('[data-close]').forEach(function(b){ b.onclick = closeCart; });
+  document.querySelectorAll('[data-open-cart]').forEach(function(b){ b.addEventListener('click', openCart); });
+  document.querySelectorAll('[data-close]').forEach(function(b){ b.addEventListener('click', closeCart); });
   document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeCart(); });
 
-  var menuBtn = document.getElementById('menuBtn'), mob = document.getElementById('mobnav');
-  menuBtn.onclick = function(){ var o = mob.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', o); };
-  mob.querySelectorAll('a').forEach(function(a){ a.onclick = function(){ mob.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false); }; });
-
-  // pickup date: from day after tomorrow
   var d = new Date(); d.setDate(d.getDate() + 2);
-  var dateInput = document.querySelector('#orderForm [name=date]');
-  dateInput.min = d.toISOString().slice(0,10);
+  document.querySelector('#orderForm [name=date]').min = d.toISOString().slice(0,10);
 
   document.getElementById('orderForm').addEventListener('submit', function(e){
     e.preventDefault();
     var f = e.target, t = total();
-    if (!t) { toast('Ajoutez d’abord des produits'); return; }
+    if (!t) { toast('Ajoutez d’abord des créations à votre commande'); return; }
     if (t < MIN_PIECES) { toast('Minimum ' + MIN_PIECES + ' pièces pour le click & collect'); return; }
     if (!f.checkValidity()) { f.reportValidity(); return; }
     var lines = Object.keys(cart).map(function(k){ return '- ' + catalog[k].name + ' : ' + cart[k] + ' pièces'; }).join('\n');
     var body = 'Bonjour,\n\nJe souhaite passer une commande en click & collect :\n\n' + lines +
-      '\n\nTotal : ' + t + ' pièces\nOccasion : ' + f.occasion.value +
-      '\nRetrait souhaité : ' + f.date.value + ', ' + f.heure.value +
+      '\n\nTotal : ' + t + ' pièces\nOccasion : ' + f.occasion.value + '\nRetrait souhaité : ' + f.date.value + ', ' + f.heure.value +
       '\n\nNom : ' + f.nom.value + '\nTéléphone : ' + f.tel.value + (f.email.value ? '\nE-mail : ' + f.email.value : '') +
       (f.msg.value ? '\n\nPrécisions : ' + f.msg.value : '') + '\n\nMerci de me confirmer la commande.';
     window.location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Commande click & collect — ' + f.nom.value + ' — ' + f.date.value) + '&body=' + encodeURIComponent(body);
     document.getElementById('sent').classList.add('show');
   });
-
-  document.getElementById('callbackForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    var tel = e.target.tel.value;
-    window.location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Demande de rappel — grosse commande') + '&body=' + encodeURIComponent('Bonjour,\n\nPouvez-vous me rappeler au ' + tel + ' pour une grosse commande ?\n\nMerci !');
-    toast('Merci, nous vous rappelons rapidement');
-  });
-
-  // row arrows
-  var row2 = document.getElementById('row2');
-  document.querySelector('[data-prev]').onclick = function(){ row2.scrollBy({left: -row2.clientWidth * .6, behavior: 'smooth'}); };
-  document.querySelector('[data-next]').onclick = function(){ row2.scrollBy({left: row2.clientWidth * .6, behavior: 'smooth'}); };
 
   render();
 })();
